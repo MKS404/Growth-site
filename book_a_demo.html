@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="How the HTML form will look!" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Arial, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 7px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  resize: vertical;
+  display: flex;
+}
+
+input[type=submit] {
+  background-color: #4891ff;
+  color: #333;
+  padding: 12px 100px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+}
+
+input[type=submit]:hover {
+  background-color: #f4f4f6;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pricing */
+.pricing .pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.pricing .pricing-card-subheading {
+  margin-bottom: 30px;
+}
+
+.pricing .pricing-card-price {
+  margin-bottom: 30px;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.pricing ul {
+  margin: 20px 0;
+}
+
+.pricing ul li {
+  margin-bottom: 20px;
+}
+
+.pricing ul li i {
+  margin-right: 0px;
+}
+
+.pricing .pricing-footer {
+  margin: 10px 0;
+}
+
+</style>
+</head>
+<!--Sageata inapoi-->
+<!--de aici-->
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+  .back-link {
+  display: inline-block;
+  padding: 3px 10px;
+  background-color: #4891ff;
+  color: #111;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.back-link:hover {
+  background-color: #f4f4f6;
+}
+</style>
+<body>
+<a href="#" onclick="goBack()" class="back-link">&lt; Back</a>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+</body>
+<!--pana aici-->
+<body>
+<div class="container">
+  <form action="/action_page.php">
+    <hr><label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+<br>
+   <hr><label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+<br>
+    <hr><label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="Romania">Romania</option>
+      <option value="Canada">Canada</option>
+      <option value="Usa">USA</option>
+        <option value="Austria">Austria</option>
+        <option value="Ungaria">Ungaria</option>
+    </select>
+      <br>
+      <label for="Subject">Tell us about your business...</label>
+    <textarea id="Subject" name="subject" placeholder="Write something.." style="height:139px"></textarea>
+    <br>
+      <hr>
+      <label for="e-mail">E-mail</label>
+      <input type="text" id="e-mail" name="e-mail" placeholder="Your e-mail...">
+    <br>
+      <input type="submit" value="Apply now">
+  </form>
+</div>
+ <!-- Pricing -->
+    <section class="pricing">
+      <div class="container-sm">
+        <h3 class="pricing-heading text-xl text-center">Pricing</h3>
+        <p class="pricing-subheading text-md text-center">
+          Start free and scale while you grow. No hidden fees. Unlimited users
+          for free.
+        </p>
+        <div class="pricing-grid">
+          <!-- Pricing Card 1 -->
+          <div class="card bg-light">
+            <div class="pricing-card-header">
+              <h4 class="pricing-heading text-xl">Simple</h4>
+              <p class="pricing-card-subheading">
+                Keep track of your contacts, gain valuable insights, analyse
+                live data and performance metrics.
+              </p>
+              <p class="pricing-card-price">
+                <span class="text-xl">Free</span>
+                *No credit card needed
+              </p>
+            </div>
+            <div class="pricing-card-body">
+              <ul>
+                <li><i class="fas fa-check"></i> Real-Time Monitoring</li>
+                <li>
+                  <i class="fas fa-check"></i>Track key performance indicators
+                </li>
+                <li><i class="fas fa-check"></i>Schedule appointments</li>
+                <li>
+                  <i class="fas fa-check"></i>Organize, delegate and keep track
+                  of tasks
+                </li>
+              </ul>
+            </div>
+    </section>
+</body>
+</html>
+
